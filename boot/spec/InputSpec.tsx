@@ -55,6 +55,7 @@ export interface FieldCommonProps {
 
 export interface FieldWrappingProps {
     label?: React.ReactNode;
+    labelClass?: string
     error?: boolean
     wasValidated?: boolean
     helperText?: React.ReactNode
