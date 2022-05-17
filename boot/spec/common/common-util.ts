@@ -11,10 +11,14 @@ export default class CommonUtil {
         return propsCopy
     }
 
-    public static addId(props: any) {
+    public static addId(props: any, existingId: any = "") {
         let id = {}
         if (props.id) {
-            id = {id: props.id}
+            existingId += " " + props.id
+            existingId = existingId.trim()
+        }
+        if (existingId !== "") {
+            id = {id: existingId}
         }
         return id
     }
