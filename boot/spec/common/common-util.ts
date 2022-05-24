@@ -39,8 +39,31 @@ export default class CommonUtil {
         return klass.trim() + " " + newKlass.trim()
     }
 
+    public static concatAttr(attr: any, newAttr: string) {
+        if (!attr) {
+            attr = ""
+        }
+        if (!newAttr) {
+            newAttr = ""
+        }
+        if (attr === "" && newAttr === "") {
+            return undefined
+        }
+        return attr.trim() + " " + newAttr.trim()
+    }
+
     public static getAndConcatClass(klass: any, newKlass: string) {
         let klassString = this.getClass(klass)
         return this.concatClass(klassString, newKlass)
+    }
+
+    public static randoId(length: any = 12, prefix: any = '') {
+        let result = prefix;
+        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let charactersLength = characters.length;
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
     }
 }
