@@ -1,7 +1,7 @@
 import React from "react";
 import PFBSReactComponent from "../common/spec-common-things";
 
-export type BoxSize = 'Small' | 'Large' | 'ExtraLarge'
+export type BoxSize = 'Small' | 'Large' | 'ExtraLarge'  | 'Fullscreen'
 
 export interface DialogProps {
     title?: string
