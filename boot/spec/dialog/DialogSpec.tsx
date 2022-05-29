@@ -10,6 +10,9 @@ export interface DialogProps {
     onLoad?: () => void;
     header?: any
     boxSize?: BoxSize
+    className?: string
+    containerClassName?: string
+    headerClassName?: string
 }
 
 

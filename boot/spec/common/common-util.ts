@@ -39,7 +39,7 @@ export default class CommonUtil {
         return klass.trim() + " " + newKlass.trim()
     }
 
-    public static concatAttr(attr: any, newAttr: string) {
+    public static concatAttr(attr: any, newAttr: any) {
         if (!attr) {
             attr = ""
         }
@@ -47,9 +47,9 @@ export default class CommonUtil {
             newAttr = ""
         }
         if (attr === "" && newAttr === "") {
-            return undefined
+            return ""
         }
-        return attr.trim() + " " + newAttr.trim()
+        return (attr.trim() + " " + newAttr.trim()).trim()
     }
 
     public static getAndConcatClass(klass: any, newKlass: string) {
