@@ -1,6 +1,6 @@
 import React from "react";
 import {CommonAttributes} from "../common/common-attrs";
-import PFBSReactComponent from "../common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "../common/spec-common-things";
 
 
 export interface CardContentProps extends React.HTMLAttributes<HTMLDivElement>, CommonAttributes {
@@ -8,4 +8,4 @@ export interface CardContentProps extends React.HTMLAttributes<HTMLDivElement>, 
 }
 
 
-export default class CardContentSpec<P extends CardContentProps, S> extends PFBSReactComponent<P, S> {}
+export default class CardContentSpec<P extends CardContentProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}
