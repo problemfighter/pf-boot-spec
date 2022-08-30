@@ -1,6 +1,6 @@
 import {CommonAttributes} from "./common/common-attrs";
 import React from "react";
-import PFBSReactComponent from "./common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "./common/spec-common-things";
 
 
 export interface AccordionHeader extends CommonAttributes {
@@ -23,6 +23,6 @@ export interface AccordionProps extends CommonAttributes {
     items: Array<AccordionItem>
 }
 
-export default class AccordionSpec<P extends AccordionProps, S> extends PFBSReactComponent<P, S> {
+export default class AccordionSpec<P extends AccordionProps, S extends PFUIState> extends PFBSReactComponent<P, S> {
 
 }

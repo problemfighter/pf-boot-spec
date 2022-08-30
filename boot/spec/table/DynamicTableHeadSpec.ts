@@ -1,6 +1,6 @@
 import {CommonAttributes} from "../common/common-attrs";
 import {Color} from "../common/common-type";
-import PFBSReactComponent from "../common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "../common/spec-common-things";
 
 export type SortDirection = 'asc' | 'desc'
 
@@ -19,4 +19,4 @@ export interface DynamicTableHeadProps {
 }
 
 
-export default class DynamicTableHeadSpec<P extends DynamicTableHeadProps, S> extends PFBSReactComponent<P, S> {}
+export default class DynamicTableHeadSpec<P extends DynamicTableHeadProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}

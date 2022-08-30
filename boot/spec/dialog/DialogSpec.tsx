@@ -1,5 +1,5 @@
 import React from "react";
-import PFBSReactComponent from "../common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "../common/spec-common-things";
 
 export type BoxSize = 'Small' | 'Large' | 'ExtraLarge'  | 'Fullscreen'
 
@@ -16,4 +16,4 @@ export interface DialogProps {
 }
 
 
-export default class DialogSpec<P extends DialogProps, S> extends PFBSReactComponent<P, S> {}
+export default class DialogSpec<P extends DialogProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}

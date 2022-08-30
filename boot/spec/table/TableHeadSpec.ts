@@ -1,6 +1,6 @@
 import {CommonAttributes} from "../common/common-attrs";
 import {Color} from "../common/common-type";
-import PFBSReactComponent from "../common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "../common/spec-common-things";
 
 
 export interface TableHeadProps extends CommonAttributes {
@@ -9,4 +9,4 @@ export interface TableHeadProps extends CommonAttributes {
 }
 
 
-export default class TableHeadSpec<P extends TableHeadProps, S> extends PFBSReactComponent<P, S> {}
+export default class TableHeadSpec<P extends TableHeadProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}

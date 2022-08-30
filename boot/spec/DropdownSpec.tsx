@@ -1,5 +1,5 @@
 import React from "react";
-import PFBSReactComponent from "./common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "./common/spec-common-things";
 
 export interface DropdownProps {
     itemList: Array<any>
@@ -15,4 +15,4 @@ export interface DropdownProps {
 }
 
 
-export default class DropdownSpec<P extends DropdownProps, S> extends PFBSReactComponent<P, S> {}
+export default class DropdownSpec<P extends DropdownProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}

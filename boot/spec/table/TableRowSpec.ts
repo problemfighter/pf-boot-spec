@@ -1,6 +1,6 @@
 import React from "react";
 import {CommonAttributes} from "../common/common-attrs";
-import PFBSReactComponent from "../common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "../common/spec-common-things";
 
 
 export interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement>, CommonAttributes {
@@ -8,4 +8,4 @@ export interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement>
 }
 
 
-export default class TableRowSpec<P extends TableRowProps, S> extends PFBSReactComponent<P, S> {}
+export default class TableRowSpec<P extends TableRowProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}

@@ -1,7 +1,7 @@
 import React from "react";
 import {Size} from "./common/common-type";
 import {CommonAttributes} from "./common/common-attrs";
-import PFBSReactComponent from "./common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "./common/spec-common-things";
 
 export type InputType =
     'text'
@@ -33,7 +33,7 @@ export interface InputCommonProps extends FieldCommonProps, CommonAttributes, To
 export interface InputProps extends InputCommonProps, React.HTMLAttributes<HTMLInputElement> {}
 
 
-export default class InputSpec<P extends InputProps, S> extends PFBSReactComponent<P, S> {
+export default class InputSpec<P extends InputProps, S extends PFUIState> extends PFBSReactComponent<P, S> {
 
 }
 

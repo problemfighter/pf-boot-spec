@@ -1,7 +1,7 @@
 import React from "react";
 import {CommonAttributes} from "../common/common-attrs";
 import {Align, Color} from "../common/common-type";
-import PFBSReactComponent from "../common/spec-common-things";
+import PFBSReactComponent, {PFUIState} from "../common/spec-common-things";
 
 export type Variant = 'striped' | 'bordered' | 'borderless'
 export type Size = 'default' | 'small'
@@ -18,4 +18,4 @@ export interface TableProps extends React.HTMLAttributes<HTMLTableElement>, Comm
 }
 
 
-export default class TableSpec<P extends TableProps, S> extends PFBSReactComponent<P, S> {}
+export default class TableSpec<P extends TableProps, S extends PFUIState> extends PFBSReactComponent<P, S> {}
