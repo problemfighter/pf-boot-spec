@@ -66,4 +66,19 @@ export default class CommonUtil {
         }
         return result;
     }
+
+    public static addPropsItem(props: any, items: Array<string>) {
+        let propsCopy: any = {}
+        for (let itemIndex in items) {
+            let item = items[itemIndex]
+            if (props.hasOwnProperty(item)) {
+                propsCopy[item] = props[item]
+            }
+        }
+        return propsCopy
+    }
+
+    public static addEventProps(props: any) {
+        return this.addPropsItem(props, ["onClick", "onBlur", "onChange", "onFocus", "onKeyDown", "onKeyUp"])
+    }
 }
